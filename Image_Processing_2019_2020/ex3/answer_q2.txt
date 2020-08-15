@@ -1,0 +1,9 @@
+﻿when we increase the image filter the difference between the two separate
+images in the overall blended image becomes more visible.
+this is because when we increase the image filter without increasing the max level
+we blur the image more in each step of creating the gaussian pyramid which in turn
+makes the laplacian pyramid hold more data about the overall structure of the image, and
+less data about the more fine details of the image. as such when we combine the 2 images
+together we end up combining them without taking into account the finer distinction
+between them at the relevant points, which in turn makes the two separate
+images in the overall blended image becomes more visible.

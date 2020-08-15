@@ -1,0 +1,8 @@
+﻿when we take the derivative using the fourier transform we
+take into account all the pixels of the image.
+this is because all of the pixels influence each fourier coefficient.
+
+on the other hand, when we take the derivative using the convolution
+method presented here, for each pixel we take into account only its nearest neighbors.
+
+as such the two methods are different and yield different results

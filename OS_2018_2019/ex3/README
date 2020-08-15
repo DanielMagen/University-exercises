@@ -1,0 +1,40 @@
+,
+Student Daniel Magen (), Student GAl Batzia ()
+EX: 3
+
+FILES:
+Barrier.cpp -- a class used by MapReduceFramework to block access to the reduce stage until
+all are finished with the map and sort stage
+Barrier.h -- an .h file for the Barrier class
+
+GlobalVariables.cpp -- a class used to hold all the data that needs to be shared among all
+workers of the MapReduceFramework
+GlobalVariables.h -- an .h file for the GlobalVariables class
+
+JobContext.cpp -- a class that is used as the JobHandle for the MapReduceFramework. it uses
+GlobalVariables in order to access most of the data.
+JobContext.h -- an .h file for the JobContext class
+
+ThreadContext.cpp -- a class which holds all the data that is relevant for a given thread.
+it uses GlobalVariables in order to access most of the data that is shared among threads.
+ThreadContext.h -- an .h file for the ThreadContext class
+
+ShuffleThreadContext.cpp -- an extension to ThreadContext to enable more functionality for the
+thread that is responsible for the shuffling stage
+ShuffleThreadContext.h -- an .h file for the ShuffleThreadContext class
+
+MapReduceFramework.cpp -- the requested implementation of the MapReduceFramework library
+
+Makefile - a makefile for the requested library
+
+README - this file
+
+
+REMARKS:
+to avoid unnecessary memory usage by JobContext and ThreadContext, we decided that rather than
+inheriting from GlobalVariables, the given classes wil instead hold a pointer to a shared
+GlobalVariables object while overriding needed functions as need be.
+
+
+ANSWERS:
+None

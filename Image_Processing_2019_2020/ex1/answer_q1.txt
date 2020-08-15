@@ -1,0 +1,5 @@
+﻿the quantization procedure will crash if we have a gray
+level (z_i - z_(i+1)) with no pixels because when we
+will try to calculate the next q_i in the optimization procedure,
+the denominator which would be the sum of the gray levels between z_i - z_(i+1)
+would be 0 and as a result we would get a division by 0 error and crash

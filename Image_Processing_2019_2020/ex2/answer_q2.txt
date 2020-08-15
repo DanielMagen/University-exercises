@@ -1,0 +1,4 @@
+﻿because the original function we wrote does not account for the
+change in phase which occurs because of the windows sampling procedure,
+there is a lot of cancellation of different phases.
+the vocoder fixes this and as such gives superior results

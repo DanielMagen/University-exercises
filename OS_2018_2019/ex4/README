@@ -1,0 +1,32 @@
+,
+Student Daniel Magen (), Student GAl Batzia ()
+EX: 4
+
+FILES:
+VirtualMemory.cpp -- The implementation of the "VirtualMemory" library. Manages the virtual memory
+principle, which is what a process sees as his space of working.  
+VirtualMemory.h -- A header file for the "VirtualMemory" library.  
+
+MemoryConstants.h -- A header file for different constants the "VirtualMemory" relies on, such as 
+a page's size, the size of the virtual memory and so on.
+
+
+Makefile - a makefile for the requested library
+
+README - this file
+
+
+REMARKS:
+1) In our jargon, we used the terms "type 1", "type 2", "type 3" regarding the frames that we allocate
+to a page in the RAM:
+	type 1 - A frame containing an empty table
+	type 2 - An unused frame 
+	type 1 - In case all frames are already used, a frame we might like to evict
+ 
+
+2) In the search of an available frame, we use a DFS algorithm for going from the first table to the last. During the DFS (the function "runDFS"), we keep track of the frames from the different types that we find, and after finising the DFS (when the function is finished), we take a frame by the prioritized order, as requested in the ex's guidlines.  
+
+3) We defined to additional typedefs called "pageNumber" and "frameNumber", made for clarifying when 
+an address is an address of a page or and address of a frame
+ANSWERS:
+None

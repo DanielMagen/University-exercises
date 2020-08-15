@@ -1,0 +1,3 @@
+﻿it seems like the more res blocks the better the results.
+there was a dip in the denoising graph, but since it was really small I assume its due to random effects.
+the images themselves confirm that the networks become better too.

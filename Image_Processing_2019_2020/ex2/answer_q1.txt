@@ -1,0 +1,7 @@
+﻿the change_samples function removes the information about the
+high frequencies that influence the sound heard. as such the output
+of change_samples has a different sound from the original.
+
+in contrast, the change_rate function does not remove any information
+but just increases the sampling rate. as such no information is lost,
+but the pitch becomes greater since now the frequencies in the audio were doubled.

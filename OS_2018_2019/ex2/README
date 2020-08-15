@@ -1,0 +1,77 @@
+tzia,
+Student Daniel Magen (), Student GAl Batzia ()
+EX: 2
+
+FILES:
+Node.cpp -- An implementation of the "Node" object. Used by the class "LinkedList".
+Node.h -- A header file for the .cpp file above.
+
+LinkedList.cpp -- An implementation of the "Linked List" abstract data structure.
+LinkedList.h -- A header file for the .cpp file above. 
+
+Thread.cpp -- An class that manages the creation and interaction with threads.
+Thread.h -- A header file for the .cpp file above. 
+
+IdManager.cpp -- A class that manages the id's of the threads.
+IdManager.h -- A header file for the .cpp file above.
+
+sleeping_threads_list.cpp -- A class which retains all the id's and
+waking up times of al the sleeping threads.
+sleeping_threads_list.h -- A header file for the .cpp file above.
+
+uthread.cpp -- A file that holds functions required for the
+implementation of the user thread library.
+
+Makefile - a makefile for the uthread library
+
+README - this file
+
+
+
+REMARKS:
+implementation notes:
+linkedList / Node - the linked list we implemented is used in the ready list to enable O(1)
+removal of a thread from the ready list if needed. each thread hold a pointer to its
+node in the linked list.
+
+idmanager - we developed an algorithm to vastly improve the memory usage needed by the
+object which gives ids to the threads. the basic principle of it is to save available ranges
+of ids and merge the ranges if need be (they are right after one another).
+
+Thread - a single thread is represented by a "Thread" object.
+
+
+ANSWERS:
+
+Q1:
+A general use for user level threads can be: when implementing a set of processes
+which need to occur "concurrently" while communicate between them on a high frequency,
+the use of "user level threads"
+supports such execution of actions which looks like they are running in parallel,
+while also allowing low overhead while switching between them,
+without needless replication of code segments.
+
+Q2:
+cons- 1) The use of processes requires accessing the kernel. This access costs overhead.
+      2) Processes are system specific API. In the context of tabs in Chrome,
+      this means that the code for tab creation is system specific and not immediately portable
+      3) Processes communication is slower than user-level threads
+
+pros- Different processes are independent. When one crashes, the others are not affected by that. 
+
+Q3:
+
+in the execution of the "kill [pid]" command a hardware interrupt is sent to the CPU,
+the result of which is that the Kernel sends a software interrupt to the process 
+with the id given.
+
+
+
+Q4:
+The difference between "Real time" and "Virtual time" is that the first measures the
+time passed by the computer's clock, regardless which operation performed.
+The latter deal with the clock from some specific application's inner running time,
+i.e., while the process is running the clock tick, and while it does not,
+it pauses (which mean, it measures threads' times).
+
+ 

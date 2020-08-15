@@ -1,0 +1,5 @@
+﻿when we use different coefficients we choose to give more or less
+importance to the different laplacian images which hold the
+changes in the image in a broader and broader sense.
+as such we are trying to control how much emphasis we put on the changes
+in the image according to how much they affect the overall structure of the image

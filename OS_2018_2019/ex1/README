@@ -1,0 +1,27 @@
+tzia,
+Student Daniel Magen (), Student GAl Batzia ()
+EX: 1
+
+FILES:
+osm.cpp -- a file that holds function for measuring running times. The measuring operations are addition, a call to an empty function and a system call.
+osm.h -- a header file for the .cpp file above.
+README -- this file.
+times.png -- the results graph.
+Makefile -- a file that runs the compiled project.
+
+REMARKS:
+we run the osm program a couple of times with more than 100,000 operations each
+
+ANSWERS:
+
+Q1:
+the program creates/overides a file called "OS2018" in the directory Welcome/To (it creates the directory if it doesn't exist)
+
+next it checks using "fstat" command that the "file" is actually a file and that it has size 0 
+then is writes to the file a message which addresses the student, after which it writes the given input to the file also.
+for example with the input "1000" we get:
+\nIf you haven't read the course guidelines yet --- do it right now!\n1000
+
+later it closes the file and deletes the file and the folders it has created
+
+

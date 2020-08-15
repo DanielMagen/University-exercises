@@ -1,0 +1,8 @@
+﻿when we decrease the max_level the difference between the two separate
+images in the overall blended image becomes more visible.
+this is because when we decrease the max_level what we do is in fact much
+closer to just overlay the images on top on another than to use the pyramid blending
+technique. this is because as such when we combine the 2 images
+together we end up combining them without taking into account the finer distinction
+between them at the relevant points, which in turn makes the two separate
+images in the overall blended image becomes more visible.

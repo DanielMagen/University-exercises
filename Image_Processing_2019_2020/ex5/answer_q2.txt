@@ -1,0 +1,27 @@
+﻿as we learned in class, downsizing an image is done by
+blurring the image using gaussian blur and then downsizing the image.
+
+hence, preforming a super-resolution could be done by
+upsampling the image to the requested size - which would give us
+a blurry version of the super-resolution image, and then trying to
+realize what that image looked like before blurring.
+
+lets say that we wish to enlarge images by a factor of 2.
+then our corruption function would use gaussian blur and downsample
+images (as we learned how to do in previous classes).
+
+after the training is done, our restore_image would work by
+1) upsampling the image to twice its original size
+2) feeding the upscaled image to our deblurring network
+3) outputing the result
+
+if we wish to enlarge images by any other factors, we would simply
+change the model layout to output a different size image, and then
+train it.
+
+note that if we train our network to upscale by a factor of x,
+then we can upsacle by any factor between 1 and x, since to do would
+only require us to upscale by a factor of x and then downscale by
+a factor of x/y.
+so in the case of a network that  can upscale by a factor of 2,
+it would actually be capable of upscale by any factor between 1 and 2
